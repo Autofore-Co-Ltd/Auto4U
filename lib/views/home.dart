@@ -23,80 +23,85 @@ class Home extends StatelessWidget {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TextField(
-              decoration: InputDecoration(
-                hintText: 'Type your question here',
-                prefixIcon: const Icon(Icons.search),
-                suffixIcon: IconButton(
-                  icon: const Icon(Icons.send),
-                  onPressed: () {
-                    // Action for send button
-                  },
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+              horizontal: 24.0), // Adjusted padding for left and right
+          child: Column(
+            crossAxisAlignment:
+                CrossAxisAlignment.center, // Centering the content horizontally
+            children: [
+              const SizedBox(height: 16), // Add some space at the top
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'Type your question here',
+                  prefixIcon: const Icon(Icons.search),
+                  suffixIcon: IconButton(
+                    icon: const Icon(Icons.send),
+                    onPressed: () {
+                      // Action for send button
+                    },
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
                 ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30.0),
+              ),
+              const SizedBox(height: 20),
+              const Text(
+                'Hello, Agatha!',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              const Text(
+                "We're ready to serve you with enthusiasm and a genuine desire to make your day great.",
+                style: TextStyle(fontSize: 16),
+                textAlign: TextAlign.center, // Center-aligning the text
+              ),
+              const SizedBox(height: 20),
+              const Text(
+                'Offers of the Day!',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 10),
+              Container(
+                height: 200,
+                decoration: BoxDecoration(
+                  image: const DecorationImage(
+                    image: AssetImage('assets/corolla.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.circular(10.0),
                 ),
-                filled: true,
-                fillColor: Colors.white,
               ),
-            ),
-            const SizedBox(height: 20),
-            const Text(
-              'Hello, Agatha!',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            const Text(
-              "We're ready to serve you with enthusiasm and a genuine desire to make your day great.",
-              style: TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 20),
-            const Text(
-              'Offers of the Day!',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 10),
-            Container(
-              height: 200,
-              decoration: BoxDecoration(
-                image: const DecorationImage(
-                  image: AssetImage(
-                      'assets/corolla.jpg'), 
-                  fit: BoxFit.cover,
+              const SizedBox(height: 20),
+              const Text(
+                'Popular Topics',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              Expanded(
+                child: ListView(
+                  children: [
+                    _buildPopularTopicItem(
+                        'Where is the auto repair shop in Uganda?',
+                        Icons.location_on,
+                        'https://example.com/auto-repair'),
+                    _buildPopularTopicItem(
+                        'Mercedes ML or Toyota Land cruiser?',
+                        Icons.directions_car,
+                        'https://example.com/mercedes-vs-toyota'),
+                    _buildPopularTopicItem('Best car bonds in Uganda and why?',
+                        Icons.attach_money, 'https://example.com/car-bonds'),
+                    _buildPopularTopicItem(
+                        'Where is the auto repair shop',
+                        Icons.location_on,
+                        'https://example.com/auto-repair-shop'),
+                  ],
                 ),
-                borderRadius: BorderRadius.circular(10.0),
               ),
-            ),
-            const SizedBox(height: 20),
-            const Text(
-              'Popular Topics',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            Expanded(
-              child: ListView(
-                children: [
-                  _buildPopularTopicItem(
-                      'Where is the auto repair shop in Uganda?',
-                      Icons.location_on,
-                      'https://example.com/auto-repair'),
-                  _buildPopularTopicItem(
-                      'Mercedes ML or Toyota Land cruiser?',
-                      Icons.directions_car,
-                      'https://example.com/mercedes-vs-toyota'),
-                  _buildPopularTopicItem('Best car bonds in Uganda and why?',
-                      Icons.attach_money, 'https://example.com/car-bonds'),
-                  _buildPopularTopicItem(
-                      'Where is the auto repair shop',
-                      Icons.location_on,
-                      'https://example.com/auto-repair-shop'),
-                ],
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
