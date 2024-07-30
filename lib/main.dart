@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'views/home.dart';
-import 'views/login.dart';
-import 'views/signup.dart';
 import 'views/chat.dart';
 import 'views/splash_screen.dart';
 
@@ -19,11 +17,9 @@ class AutoFore extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      initialRoute: '/',
+      initialRoute: '/splash',
       routes: {
-        '/': (context) => const SplashScreen(),
-        '/login': (context) => const Login(),
-        '/signup': (context) => const Signup(),
+        '/splash': (context) => const SplashScreen(),
         '/chat': (context) => const Chat(),
         '/home': (context) => Home(),
       },

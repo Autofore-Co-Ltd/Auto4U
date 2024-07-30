@@ -51,7 +51,7 @@ class Home extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               const Text(
-                'Hello, Agatha!',
+                'Hello!',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               const Text(

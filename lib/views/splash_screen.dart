@@ -6,24 +6,23 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, '/login');
+    // Navigate to Home screen after 3 seconds
+    Timer(const Duration(seconds: 2), () {
+      Navigator.pushReplacementNamed(context, '/home');
     });
-
     return Scaffold(
-      backgroundColor: Colors.red,
-      body: SingleChildScrollView(
-        child: Center(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                height: MediaQuery.of(context).size.height *
-                    0.3, 
-                child: Image.asset(
-                  'assets/logo.jpeg',
-                  fit: BoxFit.contain,
-                ),
+              // Your splash screen logo
+              Image.asset(
+                'assets/logo.jpeg',
+                width : 150,
+                height: 150,
+              
               ),
               const SizedBox(height: 20),
               const Text(
