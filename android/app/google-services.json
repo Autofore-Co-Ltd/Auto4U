@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "525477025365",
+    "project_id": "autofore-app",
+    "storage_bucket": "autofore-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525477025365:android:7c437bec75d35d54c826dc",
+        "android_client_info": {
+          "package_name": "com.example.auto4u"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeBRCcCmQDPkD4bF9XhrqP5BkNBFYXyjk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525477025365:android:880e9a1bd5e32a66c826dc",
+        "android_client_info": {
+          "package_name": "com.example.autofore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeBRCcCmQDPkD4bF9XhrqP5BkNBFYXyjk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
