@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Autofore</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="form-box">
+        <div class="logo">
+            <img src="/images/autofore-logo.png" alt="Autofore Logo">
+        </div>
+        <h1>Login</h1>
+        <p>Sign in to continue.</p>
+        <form id="loginForm">
+            <label for="name">NAME</label>
+            <input type="text" id="name" name="name" placeholder="Jiara Martins" required>
+
+            <label for="telephoneNumber">TELEPHONE NUMBER</label>
+            <div class="telephone-container">
+                <input type="text" id="countryCode" name="countryCode" value="+256" readonly>
+                <input type="text" id="telephoneNumber" name="telephoneNumber" placeholder="0703 206 702" required>
+            </div>
+
+            <button type="submit">Log in</button>
+            <p id="loginMessage"></p>
+        </form>
+        <p>New User? <a href="/signup.html">Signup!</a></p>
+    </div>
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
