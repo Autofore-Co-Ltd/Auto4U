@@ -1,18 +1,32 @@
-import 'package:auto4u/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
-
+import 'views/home.dart';
+import 'views/login.dart';
+import 'views/signup.dart';
+import 'views/chat.dart';
+import 'views/splash_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const AutoFore());
 }
 
-class MyApp extends StatelessWidget {
+class AutoFore extends StatelessWidget {
+  const AutoFore({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return  const MaterialApp(
-      debugShowCheckedModeBanner: false,
-
-      home: SignupScreen(),
+    return MaterialApp(
+      title: 'AutoFore',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const SplashScreen(),
+        '/login': (context) => const Login(),
+        '/signup': (context) => const Signup(),
+        '/chat': (context) => const Chat(),
+        '/home': (context) => Home(),
+      },
     );
   }
 }
